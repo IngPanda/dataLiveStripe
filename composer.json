@@ -1,0 +1,57 @@
+{
+    "name": "datalive/stripe",
+    "description": "php component to connect applications with stripe",
+    "type": "package",
+    "license": "MIT",
+    "keywords": ["wallet","stripe","balance"],
+    "authors": [
+        {
+            "name": "Samuel Useche",
+            "email": "samuel.useche@citriom.com"
+        }
+    ],
+
+        "repositories": [
+          {
+            "type": "package",
+            "package": {
+              "name": "datalive/serviceinfrastructure",
+              "version": "0.1.0",
+              "type": "package",
+              "source": {
+                  "url": "https://gitlab.com/data.live/service-infrastructure.git",
+                  "type": "git",
+                  "reference": "master"
+              }
+            }
+          }
+        
+        ],
+          "config":{
+              "gitlab-oauth": {
+                  "gitlab.com": "px-HoyC3Aarg1BqLmv_u"
+              }
+          },
+    
+        "require": {
+            "php": "^7.1.3",
+            "cartalyst/stripe-laravel": "8.0.*",
+            "datalive/serviceinfrastructure": "*"
+
+       }, 
+       "require-dev": { 
+              "phpunit/phpunit": "^7"
+       },
+       "autoload": { 
+              "psr-4": { 
+                     "datalive\\stripe\\": "src"
+              } 
+       },
+      "extra": {
+        "laravel": {
+            "providers": [
+                "datalive\\stripe\\StripeServiceProvider"
+            ]
+        }
+      }
+}
