@@ -7,7 +7,7 @@ use datalive\serviceinfrastructure\Infrastructure;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
  
-class Stripe
+class DataLiveStripe
 {
    protected $config;
    protected $stripe;
